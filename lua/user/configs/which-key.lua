@@ -60,9 +60,6 @@ return function()
 			},
 		},
 		spec = {
-			{ "<leader>p", group = "Package" },
-			{ "<leader>a", group = "AI" },
-			{ "<leader>d", group = "Debug" },
 			{ "<leader>g", group = icons.git.Git .. "Git" },
 			{ "<leader>b", group = icons.ui.Buffer .. " Buffer" },
 			{ "<leader>W", group = icons.ui.Window .. " Window" },

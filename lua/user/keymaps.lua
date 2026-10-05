@@ -1,22 +1,6 @@
--- Plugin-free keymaps only.
+-- Keymaps (leader = <Space>).
 local map = vim.keymap.set
 local o = function(desc) return { silent = true, desc = desc } end
-
--- Lazy.nvim package manager
-for _, binding in ipairs({
-	{ "ph", "Lazy", "Show" },
-	{ "ps", "Lazy sync", "Sync" },
-	{ "pu", "Lazy update", "Update" },
-	{ "pi", "Lazy install", "Install" },
-	{ "pl", "Lazy log", "Log" },
-	{ "pc", "Lazy check", "Check" },
-	{ "pd", "Lazy debug", "Debug" },
-	{ "pp", "Lazy profile", "Profile" },
-	{ "pr", "Lazy restore", "Restore" },
-	{ "px", "Lazy clean", "Clean" },
-}) do
-	map("n", "<leader>p" .. binding[1]:sub(2), "<Cmd>" .. binding[2] .. "<CR>", o("package: " .. binding[3]))
-end
 
 -- Save & quit
 map("n", "<C-s>", "<Cmd>write<CR>", o("Save file"))
@@ -72,10 +56,10 @@ map("n", "H", "<Cmd>BufferLineCyclePrev<CR>", { silent = true, nowait = true, de
 map("n", "<leader>x", "<Cmd>bdelete<CR>", o("which_key_ignore"))
 
 -- Windows
-map("n", "<A-H>", "<Cmd>SmartCursorMoveLeft<CR>", o("window: Focus left"))
-map("n", "<A-J>", "<Cmd>SmartCursorMoveDown<CR>", o("window: Focus down"))
-map("n", "<A-K>", "<Cmd>SmartCursorMoveUp<CR>", o("window: Focus up"))
-map("n", "<A-L>", "<Cmd>SmartCursorMoveRight<CR>", o("window: Focus right"))
+map("n", "<A-H>", "<Cmd>wincmd h<CR>", o("window: Focus left"))
+map("n", "<A-J>", "<Cmd>wincmd j<CR>", o("window: Focus down"))
+map("n", "<A-K>", "<Cmd>wincmd k<CR>", o("window: Focus up"))
+map("n", "<A-L>", "<Cmd>wincmd l<CR>", o("window: Focus right"))
 
 -- Hop
 map({ "n", "v" }, "<leader>w", "<Cmd>HopWordMW<CR>", o("jump: Goto word"))

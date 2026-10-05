@@ -19,15 +19,6 @@ return {
 		config = require("user.configs.bufferline"),
 	},
 	{
-		"mrjones2014/smart-splits.nvim",
-		cmd = { "SmartCursorMoveLeft", "SmartCursorMoveDown", "SmartCursorMoveUp", "SmartCursorMoveRight" },
-		opts = {
-			default_amount = 3,
-			ignored_buftypes = { "nofile", "quickfix", "prompt" },
-			ignored_filetypes = { "NvimTree" },
-		},
-	},
-	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = { "BufReadPost", "BufNewFile" },
 		config = require("user.configs.indent-blankline"),

@@ -31,27 +31,6 @@ au("BufReadPost", {
 au("LspAttach", {
 	group = group,
 	callback = function(e)
-		local function map(modes, lhs, rhs, desc, extra)
-			vim.keymap.set(modes, lhs, rhs, vim.tbl_extend("force", {
-				buffer = e.buf,
-				silent = true,
-				desc = desc,
-			}, extra or {}))
-		end
-
-		map("n", "K", "<Cmd>Lspsaga hover_doc<CR>", "lsp: Show doc")
-		map("n", "gd", "<Cmd>Lspsaga peek_definition<CR>", "lsp: Preview definition")
-		map("n", "gD", "<Cmd>Lspsaga goto_definition<CR>", "lsp: Goto definition")
-		map("n", "gr", "<Cmd>Lspsaga rename<CR>", "lsp: Rename", { nowait = true })
-		map("n", "gR", "<Cmd>Lspsaga rename ++project<CR>", "lsp: Rename in project")
-		map({ "n", "v" }, "ga", "<Cmd>Lspsaga code_action<CR>", "lsp: Code action")
-		map("n", "g[", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", "lsp: Prev diagnostic")
-		map("n", "g]", "<Cmd>Lspsaga diagnostic_jump_next<CR>", "lsp: Next diagnostic")
-		map("n", "<leader>lx", "<Cmd>Lspsaga show_line_diagnostics ++unfocus<CR>", "lsp: Line diagnostic")
-		map("n", "gs", vim.lsp.buf.signature_help, "lsp: Signature help")
-		map("n", "<leader>li", "<Cmd>LspInfo<CR>", "lsp: Info")
-		map("n", "<leader>lr", "<Cmd>LspRestart<CR>", "lsp: Restart")
-		map("n", "<leader>r", "<Cmd>make<CR>", "which_key_ignore")
-		map("n", "<leader>c", "<Cmd>make clean<CR>", "which_key_ignore")
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = e.buf, desc = "lsp: Goto definition" })
 	end,
 })

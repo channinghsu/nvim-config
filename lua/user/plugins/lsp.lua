@@ -14,13 +14,6 @@ return {
 		"mason-org/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonUninstall", "MasonUpdate" },
 		lazy = true,
-		opts = { ui = { border = "single" } },
-	},
-	{
-		"nvimdev/lspsaga.nvim",
-		event = "LspAttach",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {},
 	},
 	{
 		"rachartier/tiny-inline-diagnostic.nvim",
