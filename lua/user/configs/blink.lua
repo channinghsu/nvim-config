@@ -14,7 +14,20 @@ return function()
 		appearance = { nerd_font_variant = "normal" },
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 		sources = { default = { "lsp", "path", "snippets", "buffer" } },
-		cmdline = { enabled = true },
+		cmdline = {
+			enabled = true,
+			keymap = {
+				preset = "none",
+				["<down>"] = { "select_next", "fallback" },
+				["<up>"] = { "select_prev", "fallback" },
+				["<CR>"] = { "accept_and_enter", "fallback" },
+				["<C-w>"] = { "cancel", "fallback" },
+			},
+			completion = {
+				menu = { auto_show = true },
+				list = { selection = { preselect = false, auto_insert = true } },
+			},
+		},
 		completion = {
 			list = { max_items = 120, selection = { preselect = false, auto_insert = false } },
 			menu = { border = "single", scrollbar = false },

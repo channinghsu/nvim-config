@@ -61,11 +61,8 @@ return function()
 		},
 		spec = {
 			{ "<leader>g", group = icons.git.Git .. "Git" },
-			{ "<leader>b", group = icons.ui.Buffer .. " Buffer" },
-			{ "<leader>W", group = icons.ui.Window .. " Window" },
-			{ "<leader>l", group = icons.misc.LspAvailable .. " Lsp" },
 			{ "<leader>f", group = icons.ui.Telescope .. " Fuzzy Find" },
-			{ "<leader>n", group = icons.ui.FolderOpen .. " Nvim Tree" },
+			{ "<leader>p", group = icons.ui.Package .. " Lazy" },
 		},
 	})
 end

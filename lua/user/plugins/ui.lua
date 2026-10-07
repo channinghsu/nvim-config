@@ -1,15 +1,19 @@
 return {
+    {
+        "karb94/neoscroll.nvim",
+        keys = { "<C-d>", "<C-u>"},
+        opts = {},
+    },
 	{
-		"Jint-lzxy/nvim",
+		"catppuccin/nvim",
 		name = "catppuccin",
-		branch = "refactor/syntax-highlighting",
 		lazy = false,
 		priority = 1000,
 		config = require("user.configs.catppuccin"),
 	},
 	{
 		"goolord/alpha-nvim",
-		event = "BufWinEnter",
+        event = { "VimEnter", "BufEnter" },
 		config = require("user.configs.alpha"),
 	},
 	{

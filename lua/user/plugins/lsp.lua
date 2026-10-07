@@ -1,5 +1,10 @@
 -- Language servers are installed with :Mason and enabled automatically.
 return {
+    {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {},
+    },
 	{
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPre", "BufNewFile" },
@@ -39,7 +44,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
-		lazy = false,
+        event = { "BufReadPost", "BufNewFile" },
 		build = ":TSUpdate",
 		config = require("user.configs.treesitter"),
 	},
