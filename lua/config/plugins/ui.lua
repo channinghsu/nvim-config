@@ -31,7 +31,6 @@ return {
 		"smoka7/hop.nvim",
 		version = "*",
 		cmd = { "HopWordMW" },
-		config = require("config.configs.hop"),
 	},
 	{
 		"nvim-lualine/lualine.nvim",
