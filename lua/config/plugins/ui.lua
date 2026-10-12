@@ -25,7 +25,6 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = { "BufReadPost", "BufNewFile" },
-		config = require("config.configs.indent-blankline"),
 	},
 	{
 		"smoka7/hop.nvim",
@@ -46,6 +45,5 @@ return {
 		"MeanderingProgrammer/render-markdown.nvim",
 		ft = "markdown",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
-		config = require("config.configs.render-markdown"),
 	},
 }
