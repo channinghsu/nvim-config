@@ -1,5 +1,5 @@
 return function()
-	local mapping = require("user.gitsigns-keymaps")
+	local mapping = require("config.gitsigns-keymaps")
 	require("gitsigns").setup({
 		signs = {
 			add = { text = "┃" },

@@ -1,8 +1,8 @@
 return function()
 	local dashboard = require("alpha.themes.dashboard")
-	require("user.util").gen_alpha_hl()
+	require("config.util").gen_alpha_hl()
 
-	dashboard.section.header.val = require("user.dashboard")
+	dashboard.section.header.val = require("config.dashboard")
 	dashboard.section.header.opts.hl = "AlphaHeader"
 
 	local function button(sc, txt, leader_txt, keybind, keybind_opts)
@@ -40,10 +40,10 @@ return function()
 
 	local leader = " "
 	local icons = {
-		documents = require("user.icons").get("documents", true),
-		git = require("user.icons").get("git", true),
-		ui = require("user.icons").get("ui", true),
-		misc = require("user.icons").get("misc", true),
+		documents = require("config.icons").get("documents", true),
+		git = require("config.icons").get("git", true),
+		ui = require("config.icons").get("ui", true),
+		misc = require("config.icons").get("misc", true),
 	}
 
 	dashboard.section.buttons.val = {

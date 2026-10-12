@@ -15,7 +15,7 @@ return {
 			{ "<leader>nf", "<Cmd>NvimTreeFindFile<CR>", desc = "filetree: Find file" },
 			{ "<leader>nr", "<Cmd>NvimTreeRefresh<CR>", desc = "filetree: Refresh" },
 		},
-		config = require("user.configs.nvim-tree"),
+		config = require("config.configs.nvim-tree"),
 	},
 	{
 		"nvim-telescope/telescope.nvim",
@@ -26,7 +26,7 @@ return {
 			"jvgrootveld/telescope-zoxide",
 			"nvim-telescope/telescope-live-grep-args.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-			{ "ayamir/search.nvim", config = require("user.configs.search") },
+			{ "ayamir/search.nvim", config = require("config.configs.search") },
 		},
 		keys = {
 			{ "<leader>fc", function()
@@ -59,7 +59,7 @@ return {
 			{ "<leader>fr", "<Cmd>Telescope resume<CR>", desc = "tool: Resume last search" },
 			{ "<C-p>", "<Cmd>Telescope keymaps<CR>", desc = "tool: Toggle command panel" },
 		},
-		config = require("user.configs.telescope"),
+		config = require("config.configs.telescope"),
 	},
 	{
 		"akinsho/toggleterm.nvim",
@@ -71,6 +71,6 @@ return {
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
-		config = require("user.configs.which-key"),
+		config = require("config.configs.which-key"),
 	},
 }

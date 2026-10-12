@@ -1,9 +1,9 @@
 return function()
 	local icons = {
-		ui = require("user.icons").get("ui"),
-		misc = require("user.icons").get("misc"),
-		git = require("user.icons").get("git", true),
-		cmp = require("user.icons").get("cmp", true),
+		ui = require("config.icons").get("ui"),
+		misc = require("config.icons").get("misc"),
+		git = require("config.icons").get("git", true),
+		cmp = require("config.icons").get("cmp", true),
 	}
 
 	require("which-key").setup({

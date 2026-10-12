@@ -42,13 +42,13 @@ vim.api.nvim_create_autocmd("LspProgress", {
 
 return function()
 	local has_catppuccin = (vim.g.colors_name or ""):find("catppuccin") ~= nil
-	local colors = require("user.util").get_palette()
+	local colors = require("config.util").get_palette()
 	local icons = {
-		diagnostics = require("user.icons").get("diagnostics", true),
-		git = require("user.icons").get("git", true),
-		git_nosep = require("user.icons").get("git"),
-		misc = require("user.icons").get("misc", true),
-		ui = require("user.icons").get("ui", true),
+		diagnostics = require("config.icons").get("diagnostics", true),
+		git = require("config.icons").get("git", true),
+		git_nosep = require("config.icons").get("git"),
+		misc = require("config.icons").get("misc", true),
+		ui = require("config.icons").get("ui", true),
 	}
 
 	local function custom_theme()
@@ -62,7 +62,7 @@ return function()
 		})
 
 		if has_catppuccin then
-			colors = require("user.util").get_palette()
+			colors = require("config.util").get_palette()
 			local universal_bg = true and "NONE" or colors.mantle
 			return {
 				normal = {

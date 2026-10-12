@@ -6,14 +6,14 @@ Built on [lazy.nvim](https://github.com/folke/lazy.nvim). The previous full fram
 ## Layout
 
 ```
-init.lua                      -> require("user")
-lua/user/
+init.lua                      -> require("config")
+lua/config/
 ├─ init.lua                   -> leader, options, keymaps, autocmds, lazy
 ├─ options.lua                -> editor options, macOS clipboard
 ├─ keymaps.lua                -> my keymaps
 ├─ autocmds.lua               -> small autocmds (+ `gd` on LspAttach)
 ├─ gitsigns-keymaps.lua       -> <leader>g* hunk keys (attached by gitsigns)
-├─ lazy.lua                   -> lazy.nvim bootstrap, imports user.plugins
+├─ lazy.lua                   -> lazy.nvim bootstrap, imports config.plugins
 ├─ dashboard.lua              -> ASCII art for the start screen
 ├─ icons.lua  util.lua        -> icon table, palette helpers
 ├─ plugins/                   -> plugin specs
@@ -75,4 +75,4 @@ press `i` to edit the raw text.
 
 ## Adding things
 
-Drop a spec into `lua/user/plugins/*.lua` (return a list of lazy.nvim specs); it is picked up automatically.
+Drop a spec into `lua/config/plugins/*.lua` (return a list of lazy.nvim specs); it is picked up automatically.

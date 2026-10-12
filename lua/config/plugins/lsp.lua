@@ -13,7 +13,7 @@ return {
 			"mason-org/mason-lspconfig.nvim",
 			"saghen/blink.cmp",
 		},
-		config = require("user.configs.lsp"),
+		config = require("config.configs.lsp"),
 	},
 	{
 		"mason-org/mason.nvim",
@@ -24,14 +24,14 @@ return {
 		"rachartier/tiny-inline-diagnostic.nvim",
 		event = "VeryLazy",
 		priority = 1000,
-		config = require("user.configs.tiny-inline-diagnostic"),
+		config = require("config.configs.tiny-inline-diagnostic"),
 	},
 	{
 		"saghen/blink.cmp",
 		version = "1.*",
 		lazy = true,
 		event = { "InsertEnter", "CmdlineEnter" },
-		config = require("user.configs.blink"),
+		config = require("config.configs.blink"),
 	},
 	{
 		"stevearc/conform.nvim",
@@ -39,14 +39,14 @@ return {
 		keys = {
 			{ "<A-S-f>", function() require("conform").format() end, desc = "formatter: Format buffer" },
 		},
-		config = require("user.configs.conform"),
+		config = require("config.configs.conform"),
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
 		branch = "main",
         event = { "BufReadPost", "BufNewFile" },
 		build = ":TSUpdate",
-		config = require("user.configs.treesitter"),
+		config = require("config.configs.treesitter"),
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",

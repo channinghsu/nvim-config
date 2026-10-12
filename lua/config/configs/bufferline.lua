@@ -1,5 +1,5 @@
 return function()
-	local icons = { ui = require("user.icons").get("ui") }
+	local icons = { ui = require("config.icons").get("ui") }
 
 	local opts = {
 		options = {
