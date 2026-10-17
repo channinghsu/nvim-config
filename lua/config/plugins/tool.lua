@@ -10,10 +10,7 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeFindFile", "NvimTreeRefresh" },
 		keys = {
-			{ "<C-n>", "<Cmd>NvimTreeToggle<CR>", desc = "filetree: Toggle" },
 			{ "<leader>e", "<Cmd>NvimTreeToggle<CR>", desc = "filetree: Toggle" },
-			{ "<leader>nf", "<Cmd>NvimTreeFindFile<CR>", desc = "filetree: Find file" },
-			{ "<leader>nr", "<Cmd>NvimTreeRefresh<CR>", desc = "filetree: Refresh" },
 		},
 		config = require("config.configs.nvim-tree"),
 	},
